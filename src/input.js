@@ -9,6 +9,12 @@ export default class InputHandler {
         case "ArrowRight":
           paddle.moveRight();
           break;
+        case "Escape":
+          game.togglePause();
+          break;
+        case "Space":
+          game.start();
+          break;
         default:
           break;
       }
@@ -22,9 +28,6 @@ export default class InputHandler {
           break;
         case "ArrowRight":
           if (paddle.speed > 0) paddle.stop();
-          break;
-        case "Escape":
-          game.togglePause();
           break;
         default:
           break;
